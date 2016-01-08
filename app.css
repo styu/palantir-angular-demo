@@ -1,0 +1,45 @@
+html,
+body {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+h2 {
+  margin: 20px 0;
+}
+.game-container {
+  margin: 20px 0;
+}
+.game-container .player,
+.game-container .tied,
+.game-container .winning-player {
+  margin: 10px 0;
+}
+.game-container .game {
+  cursor: pointer;
+  height: 450px;
+  margin: 0 auto;
+  width: 450px;
+}
+.game-container .game .row {
+  height: 150px;
+  width: 100%;
+}
+.game-container .game .row .cell {
+  border: 1px solid black;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+  width: 150px;
+}
+.game-container .game .row .cell.winner {
+  background: green;
+}
+.game-container .game .row .cell span {
+  display: block;
+  font-size: 4em;
+  line-height: 150px;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+}
