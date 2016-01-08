@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app="ticTacToeApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <!-- File that does the logic checking for a tic tac toe winner for us -->
+    <script src="tictactoe.js" type="text/javascript"></script>
+    <!-- Main javascript file -->
+    <script src="app.js" type="text/javascript"></script>
+
+    <!-- Fancy fonts from google -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+    <!-- Main style sheet -->
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <h2>Tic Tac Toe</h2>
+    <!-- This is the directive. When you load the page, it will automatically fill the contents with what you assigned 'template' to be -->
+    <tic-tac-toe class="main-content"></tic-tac-toe>
+  </body>
+</html>
