@@ -1,0 +1,58 @@
+html, body {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+h2 {
+  margin: 20px 0;
+}
+
+// main game container
+.game-container {
+  margin: 20px 0;
+
+  .player, .tied, .winning-player {
+    margin: 10px 0;
+  }
+
+  // tic tac toe board
+  .game {
+    // variable to control the width of the board
+    // having this means I don't have to update the value in 5 different places
+    @gameSize: 450px;
+
+    cursor: pointer;
+    height: @gameSize;
+    margin: 0 auto;
+    width: @gameSize;
+
+    .row {
+      height: @gameSize / 3;
+      width: 100%;
+
+      .cell {
+        border: 1px solid black;
+        box-sizing: border-box;
+        display: inline-block;
+        height: 100%;
+        vertical-align: top;
+        width: @gameSize / 3;
+
+        // highlight the cell as green when it also has the class 'winner'
+        &.winner {
+          background: green;
+        }
+
+        // inside text that says 'X' or 'O'
+        span {
+          display: block;
+          font-size: 4em;
+          line-height: @gameSize / 3;
+          text-align: center;
+          vertical-align: middle;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
