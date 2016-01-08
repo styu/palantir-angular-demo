@@ -80,7 +80,7 @@ app.directive("ticTacToe", function() {
       // resets the winner
       controller.winningPlayer = null;
       // only sets the player if we haven't already been playing
-      if (controller.currentPlayer != null) {
+      if (controller.currentPlayer == null) {
         controller.currentPlayer = oPiece;
       }
     }
