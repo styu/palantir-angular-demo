@@ -79,10 +79,8 @@ app.directive("ticTacToe", function() {
       controller.currentGame = angular.copy(templateGame);
       // resets the winner
       controller.winningPlayer = null;
-      // switches the player if we've already been playing
+      // only sets the player if we haven't already been playing
       if (controller.currentPlayer != null) {
-        controller.switchPlayer();
-      } else {
         controller.currentPlayer = oPiece;
       }
     }
