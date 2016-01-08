@@ -41,7 +41,6 @@ app.directive("ticTacToe", function() {
           winningMoves.forEach(function(winningMove) {
             controller.recordWin(winningMove.player, winningMove.type, winningMove.index);
           });
-          controller.winningPlayer = winner;
         }
       }
     }
@@ -71,6 +70,7 @@ app.directive("ticTacToe", function() {
           }
           break;
       }
+      controller.winningPlayer = winner;
     }
 
     // starts a new game
